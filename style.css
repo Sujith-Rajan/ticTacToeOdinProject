@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    background-color: #0e0e1c;
+    row-gap: 30px;
+}
+h1{
+    margin-top: 3rem;
+    color: #1f3e54;
+    text-shadow: 1px 1px 2px white;
+    text-decoration: underline;
+}
+#board{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    cursor: pointer;
+    width: 250px;
+    position: relative;
+    text-align: center;
+}
+.title{
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 3em;
+   color: white;
+   background-color: rgb(20 21 33);
+   width:100%;
+   height: 80px;
+}
+.right-border{
+    border-right: 6px solid rgb(0, 0, 0);
+
+}
+.bottom-border{
+    border-bottom: 6px solid rgb(0, 0, 0);
+}
+.strike{
+    position: absolute;
+    background-color: red;
+   
+}
+.strike-row-1{
+    width:100%;
+    height: 4px;
+    top:15%;
+}
+.strike-row-2{
+    width:100%;
+    height: 4px;
+    top:48%;
+}
+.strike-row-3{
+    width:100%;
+    height: 4px;
+    top:83%;
+}
+.strike-column-1{
+   height: 100%;
+   width: 4px;
+   left: 15%;
+   top:0;
+}
+.strike-column-2{
+    height: 100%;
+    width: 4px;
+    left: 48%;
+    top:0;
+ }
+ .strike-column-3{
+    height: 100%;
+    width: 4px;
+    left: 83%;
+    top:0;
+ }
+ .strike-daigonal-1{
+    height: 4px;
+    width: 92%;
+    left: 5%;
+    transform: skewY(43deg);
+    top:49%;
+
+ }
+ .strike-daigonal-2{
+    height: 4px;
+    width: 92%;
+    left: 5%;
+    transform: skewY(-43deg);
+    top:48%;
+
+ }
+ 
+ #game-over-area{
+    
+    top:70%;
+    row-gap: 20px;
+    color: rgb(48, 174, 48);
+    border:6px solid rgb(0, 0, 0);
+    width:250px;
+    height: max-content;
+    text-align: center;
+ }  
+ #play-again{
+    border: 2px solid green;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+ }
+.hidden {
+    display: none;
+  }
+.visible{
+    display: block;
+}
+.x-hover:hover::after{
+    content: "X";
+    opacity: 0.4;
+}
+.o-hover:hover::after{
+    content: "O";
+    opacity: 0.4; 
+}
